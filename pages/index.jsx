@@ -70,8 +70,9 @@ const Home = ({ isAuthenticated, userData, contacts }) => {
 					<div>
 					</div>
 					<div className="w-full mt-8 flex justify-center items-center " >
-						{ contactList.length && <ContactsTable contacts={contactList} contactList={contactList} setContactList={setContactList} handleContactDelete={handleContactDelete} /> }
-						{ !contactList.length && <NoContactsFound /> }
+						{ contactList.length 
+						? <ContactsTable contacts={contactList} contactList={contactList} setContactList={setContactList} handleContactDelete={handleContactDelete} />
+						: <NoContactsFound /> }
 					</div>
 					<div className="absolute flex flex-col justify-center items-start gap-5 bottom-5 left-5 " >
 						<Link href="/contacts/new" passHref >
