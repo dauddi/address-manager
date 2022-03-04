@@ -10,7 +10,7 @@ const NewContact = () => {
   if (checkCookies("user")) {
     userData = JSON.parse(getCookie("user"));
   } else {
-    Router.push("/auth/login");
+    () => Router.push("/auth/login");
   }
 
   useEffect(() => {
