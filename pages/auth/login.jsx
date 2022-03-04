@@ -34,7 +34,7 @@ const Login = () => {
     } else {
       const data = await response.json();
       const { user } = data;
-      console.log("Request Success", user);
+      console.log("Request Success");
       localStorage.setItem('user', JSON.stringify(user));
       setCookies("user", JSON.stringify(user));
       setTimeout(() => Router.push("/"), 200);

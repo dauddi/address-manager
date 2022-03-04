@@ -34,8 +34,6 @@ const Register = () => {
 
     const data = {firstName, lastName, ...registerCredentials}
 
-    console.log(data);
-
     const response = await fetch("/api/auth/register", {
       method: "POST",
       body: JSON.stringify(data),

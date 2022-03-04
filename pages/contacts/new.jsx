@@ -34,8 +34,7 @@ const NewContact = () => {
 			console.log("something went wrong", response.status);
 		} else {
 			const data = await response.json();
-      Router.push("/")
-			console.log(data);
+      Router.push("/");
 		}
 	}
 
